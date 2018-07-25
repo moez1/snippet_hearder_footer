@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+	
+ <template id="snippet_header" name="Header snippet">
+  <section class="snippet_testimonial">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <img alt="client" class="img-circle" src="/theme_tutorial/static/src/img/client_3.jpg"/>
+          <h3>Slogan</h3>
+          <p>Quelle est le slogan de l'entreprise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<template id="s_footer" name="snippet footer">
+    <div class="well s_well clearfix">
+        <p>
+            Ecrivez une description de votre entreprise.
+        </p>
+    </div>
+</template>
+
+<template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
+  <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="snippet_hearder_footer.snippet_header"
+       t-thumbnail="/theme_tutorial/static/src/img/ui/snippet_thumb.jpg"/>
+       
+   <t t-snippet="snippet_hearder_footer.s_footer" t-thumbnail="/website/static/src/img/blocks/block_well.png"/>
+    
+  </xpath>
+</template>
+
+
+</odoo>
